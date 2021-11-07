@@ -4,7 +4,7 @@ const hbs      =    require('hbs')
 const geocode  =    require('./utils/geocode')
 const forecast =    require('./utils/forecast')
 const app=express()
-const port=3000
+const port=process.env.PORT || 3000
 
 //path for public static assets
 const publicDirectory=path.join(__dirname,"../public")
@@ -33,7 +33,7 @@ app.get("/weather", (req,res)=>{
     if(!req.query.address){
         console.log("please enter a search value")
         return res.send({
-            error:'Please provide an address'
+            error:'Please provide a valid location to view the forecast!'
         })
     }
     geocode(req.query.address,(error,location)=>{

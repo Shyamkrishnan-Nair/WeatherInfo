@@ -4,15 +4,21 @@ const geolocation=(location,callback) =>{
     request({url:geoUrl,json:true},(error,response) =>{
         
         if(error){
-            const error="Error whie fetching location, try again.."
+            const error={
+                error:"Error whie fetching location, try again.."
+            }
             const data="undefined"
             callback(error,data);
         }else if(response.body.message){
-            const error ="Empty location. Try again with valid location"
+            const error ={
+                error:"Empty location. Try again with valid location"
+            }
             const data="undefined"
             callback(error,data);
         }else if(response.body.features.length === 0){
-            const error ="Invalid location. Try again with valid location"
+            const error ={
+                error:"Invalid location. Please try again with valid location!"
+            }
             const data="undefined"
             callback(error,data);
         }else{

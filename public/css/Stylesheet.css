@@ -24,7 +24,6 @@ body{
     flex-direction: column;
     min-height: 100vh;
     font-family: system-ui;
-    background-image: url("../img/bg1.jpg");
     width: 100%;
 }
 
@@ -51,7 +50,6 @@ form{
 .weatherInfo{
     height: 50%;
     width: 50%;
-    background: whitesmoke;
     position: absolute;
     top: 30%;
     right: 23%;
@@ -64,7 +62,7 @@ form{
 }
 
 .box2{
-    margin-top: 100px;
+    margin-top: 40px;
 }
 
 .tempBox{
@@ -79,7 +77,7 @@ form{
     color: #3043c0;
 }
 
-.fa-cloud{
+.fa-cloud-sun{
     color: #3043c0;
 }
 .temperature{
@@ -87,13 +85,13 @@ form{
     color: #b236da;
 }
 
-label{
+.label{
     font-weight: bold;
     padding-right:10px;
+    font-size: 10px;
 }
 
 .value{
-    padding-left :50px;
     color:#b236da;
     font-weight: bold;
 }
@@ -105,6 +103,7 @@ button {
     border: 1px solid;
     width: 78px;
     height: 30px;
+    cursor: pointer;
 }
 
 input:focus, textarea:focus, select:focus{
@@ -114,4 +113,27 @@ input:focus, textarea:focus, select:focus{
 input {
     border:none;
     border-bottom:1px solid #b236da;
+}
+
+.errorBox{
+    color:red;
+    color: red;
+    position: absolute;
+    left: 22%;
+    top: 14%;
+}
+.weatherDesc{
+    position: absolute;
+    top: 55%;
+    left: 17%;
+    color: #b236da;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.iconDiv{
+    color: #b236da;
+    position: absolute;
+    top: 30%;
+    left: 36%;
 }

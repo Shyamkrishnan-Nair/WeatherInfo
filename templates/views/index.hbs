@@ -8,22 +8,28 @@
     {{>header}}
     <div class="main">
         <form>
-            <input placeholder="search location">
+            <input placeholder="Search location">
             <button>Search</button>
         </form>
 
         <div class="weatherInfo">
-           <div class="box1">
-                <span class="tempBox"><i class="fas fa-cloud fa-5x"></i><span class="temperature"></span></span> 
+           <div class="iconDiv"> <i class="fas fa-cloud-sun-rain fa-7x"></i></div>
+           <div class="box1" style="display: none;">
+                <span class="tempBox"><i class="fas fa-cloud-sun fa-5x"></i><span class="temperature"></span></span> 
+                <div class="weatherDesc"></div>
            </div>
 
-           <div class="box2">
-                <div class="row1"><label>Location   : </label> <span class="location value"></span></div>
-                <div class="row1"><label>Feels Like : </label> <span class="feelsLike value"></span></div>
-                <div class="row1"><label>Humidity   : </label> <span class="humidity value"></span></div>
-                <div class="row1"><label>Windspeed  : </label> <span class="windSpeed value"></span></div>
+           <div class="box2" style="display: none;">
+                <div class="row1"><div class="label">LOCATION </div> <span class="location value"></span></div>
+                <div class="row1"><div class="label">FEELS LIKE </div> <span class="feelsLike value"></span></div>
+                <div class="row1"><div class="label">HUMIDITY </div> <span class="humidity value"></span></div>
+                <div class="row1"><div class="label">WINDSPEED </div> <span class="windSpeed value"></span></div>
            </div>
+
+           <div class="errorBox" style="display: none;"></div>
         </div>
+
+
     </div>
     
      {{>footer}}
